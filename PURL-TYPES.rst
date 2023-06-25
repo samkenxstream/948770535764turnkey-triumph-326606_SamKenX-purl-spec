@@ -46,7 +46,7 @@ apk
 ``apk`` for APK-based packages:
 
 - There is no default package repository: this should be implied either from
-  the ``distro`` qualifiers key  or using a repository base url as 
+  the ``distro`` qualifiers key  or using a repository base url as
   ``repository_url`` qualifiers key.
 - The ``namespace`` is the vendor such as ``alpine`` or ``openwrt``. It is not
   case sensitive and must be lowercased.
@@ -75,7 +75,7 @@ bitbucket
 
 cocoapods
 ---------
-``cocoapods`` for Cocoapods:
+``cocoapods`` for CocoaPods:
 
 - The default repository is ``https://cdn.cocoapods.org/``.
 - The ``name`` is the pod name and is case sensitive, cannot contain whitespace, a plus (`+`) character, or begin with a period (`.`).
@@ -107,6 +107,7 @@ composer
 
 - The default repository is ``https://packagist.org``.
 - The ``namespace`` is the vendor.
+- The ``namespace`` and ``name`` are not case sensitive and must be lowercased.
 - Note: private, local packages may have no name. In this case you cannot
   create a ``purl`` for these.
 - Examples::
@@ -124,7 +125,7 @@ conan
 - Qualifier ``channel``: The Conan ``<channel>``. Only required if the Conan package was published with Conan ``<channel>``.
 - Qualifier ``rrev``: The Conan recipe revision (optional). If omitted, the purl refers to the latest recipe revision available for the given version.
 - Qualifier ``prev``: The Conan package revision (optional). If omitted, the purl refers to the latest package revision available for the given version and recipe revision.
-- Qualifier ``repository_url``: The Conan repository where the package is available (optional). If ommitted, ``https://center.conan.io`` as default repository is assumed.
+- Qualifier ``repository_url``: The Conan repository where the package is available (optional). If omitted, ``https://center.conan.io`` as default repository is assumed.
 
 Additional qualifiers can be used to distinguish Conan packages with different settings or options, e.g. ``os=Linux``, ``build_type=Debug`` or ``shared=True``.
 
@@ -239,7 +240,7 @@ version control repository such as a bare git repo.
 
 github
 ------
-``github`` for Github-based packages:
+``github`` for GitHub-based packages:
 
 - The default repository is ``https://github.com``.
 - The ``namespace`` is the user or organization. It is not case sensitive and
@@ -342,7 +343,7 @@ mlflow
   - Azure Databricks: ``https://adb-<numbers>.<number>.azuredatabricks.net/api/2.0/mlflow``
   - AWS Databricks: ``https://dbc-<alphanumeric>-<alphanumeric>.cloud.databricks.com/api/2.0/mlflow``
   - GCP Databricks: ``https://<numbers>.<number>.gcp.databricks.com/api/2.0/mlflow``
-  
+
 - The ``namespace`` is empty.
 - The ``name`` is the model name. Case sensitivity depends on the server implementation:
 
@@ -387,7 +388,7 @@ qpkg
 ``qpkg`` for QNX packages:
 
 - There is no default package repository: this should be implied either from
-  the ``namespace`` or using a repository base URL as ``repository_url`` 
+  the ``namespace`` or using a repository base URL as ``repository_url``
   qualifiers key.
 - The ``namespace`` is the vendor of the package. It is not case sensitive and must be
   lowercased.
@@ -519,7 +520,6 @@ Other candidate types to define:
 - ``chef`` for Chef packages:
 - ``chocolatey`` for Chocolatey packages
 - ``clojars`` for Clojure packages:
-- ``cocoapods`` for Cocoapods iOS packages:
 - ``coreos`` for CoreOS packages:
 - ``cpan`` for CPAN Perl packages:
 - ``ctan`` for CTAN TeX packages:
@@ -530,7 +530,7 @@ Other candidate types to define:
 - ``elm`` for Elm packages:
 - ``eclipse`` for Eclipse projects packages:
 - ``gitea`` for Gitea-based packages:
-- ``gitlab`` for Gitlab-based packages:
+- ``gitlab`` for GitLab-based packages:
 - ``gradle`` for Gradle plugins
 - ``guix`` for Guix packages:
 - ``haxe`` for Haxe packages:
